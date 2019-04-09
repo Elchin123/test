@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Working with slider</title>
+</head>
+<body>
+	<img src="img/hemi.jpg" id="1">
+	<button onclick="right()">right click</button>
+	<button onclick="left()">left click</button>
+
+</body>
+<script type="text/javascript">
+	var sss=document.getElementById('1')
+		var images = ['img/hemi.jpg','img/arms,jpg','img/island.jpg','img/man.jpg','img/the bell.jpg'];
+		var i=0;
+			slide.src=images[i];
+		function right(){
+			if (images.length-1==i){
+				i=0;
+				slide.src=images[i];
+			}
+			else{
+				i++
+				slide.src=images[i];
+			}
+		}
+
+		function left(){
+			if (i==0) {
+				document.write(i);
+				i=images.length-1;
+				slide.src=images[i];
+			}
+			else{
+				i--
+				slide.src=images[i];
+
+			}
+		}
+
+		var i=0;
+			var images = ['img/hemi.jpg','img/arms,jpg','img/island.jpg','img/man.jpg','img/the bell.jpg'];
+			var time=500;
+			window.onload = changeImg;
+				setInterval("changeImg()",time);
+			function changeImg(){
+				document.slide.src=images[i];
+				if (i<images.length-1) {
+					i++;
+				}
+				else{
+					i=0;
+				}
+			}
+</script>
+</html>
